@@ -1,19 +1,26 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
 
 /* 
   Write the Big O time complexity of your function here
-*/
+*/    for (let i = 0; i < array.length - 1; i++) {
+        for (let j = i + 1; j < array.length; j++) {
 
 /* 
   Add your pseudocode here
-*/
+*/if (array[i] + array[j] === target) {
+                return true;
+            }
+        }
+    }
+    // If no pair is found, return false
+    return false;
+}
+
 
 /*
   Add written explanation of your solution here
 */
-
+    module.exports = hasTargetSum;
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
